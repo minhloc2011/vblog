@@ -4,7 +4,7 @@
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "impliedStrict": true
     },
     "allowImportExportEverywhere": true
   },
@@ -30,6 +30,6 @@
     "no-unused-vars": [1, {"vars": "all", "args": "all"}],
     "no-multi-assign": "off",
     "no-empty": [1, { "allowEmptyCatch": true }],
-    "no-console": [1, { "allow": ["warn", "error"] }]
+    "no-console": [1, { "allow": ["warn", "error"] }],
   }
 }

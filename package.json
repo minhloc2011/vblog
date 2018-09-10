@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "start": "webpack-dev-server",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",
@@ -11,16 +12,22 @@
     },
     "dependencies": {
         "axios": "^0.18",
+        "bootstrap": "^4.0.0",
         "jquery": "^3.2",
         "lodash": "^4.17.4",
         "popper.js": "^1.12",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
-        "bootstrap": "^4.0.0"
+        "webpack": "^3.11.0"
     },
     "devDependencies": {
+        "babel-core": "^6.26.3",
         "babel-eslint": "^9.0.0",
+        "babel-loader": "^7.1.5",
+        "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.23.0",
+        "browser-sync": "^2.24.7",
+        "browser-sync-webpack-plugin": "2.0.1",
         "cross-env": "^5.1",
         "eslint": "^5.5.0",
         "eslint-config-airbnb": "^17.1.0",

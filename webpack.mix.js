@@ -12,16 +12,34 @@ let mix = require('laravel-mix');
  */
 
 mix
-    .webpackConfig({
-        module: {
-            rules: [
-                {
-                    test: /\.(js|jsx)$/,
-                    exclude: /node_modules/,
-                    use: ['eslint-loader']
-                }
-            ]
+  .webpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: ['babel-loader']
+        },
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: ['babel-loader', 'eslint-loader']
         }
-    })
-    .react('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css');
+      ]
+    },
+    resolve: {
+      extensions: ['*', '.js', '.jsx']
+    }
+  })
+  .react('resources/assets/js/app.js', 'public/js')
+  .sass('resources/assets/sass/app.scss', 'public/css')
+  .browserSync({
+    proxy: 'localhost',
+    host: 'localhost',
+    port: 80,
+    open: false,
+    files: [
+      'resources/assets/js/**/*'
+    ]
+  });
+
