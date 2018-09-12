@@ -18,28 +18,37 @@ mix
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          use: ['babel-loader']
+          use: ['babel-loader'],
         },
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          use: ['babel-loader', 'eslint-loader']
-        }
-      ]
+          use: ['babel-loader', 'eslint-loader'],
+        },
+      ],
     },
     resolve: {
-      extensions: ['*', '.js', '.jsx']
-    }
+      extensions: ['*', '.js', '.jsx'],
+    },
   })
   .react('resources/assets/js/app.js', 'public/js')
-  .sass('resources/assets/sass/app.scss', 'public/css')
+  .styles([
+    'public/css/core/bootstrap.min.css',
+    'public/css/core/now-ui-kit.css',
+    'resources/assets/css/style.css',
+  ], 'public/css/app.css')
+  .scripts([
+    'public/js/core/jquery.min.js',
+    'public/js/core/bootstrap.min.js',
+    'public/js/core/popper.min.js',
+    'public/js/core/now-ui-kit.js',
+  ], 'public/js/vendor.js')
   .browserSync({
     proxy: 'localhost',
     host: 'localhost',
     port: 80,
     open: false,
     files: [
-      'resources/assets/js/**/*'
-    ]
+      'resources/assets/js/**/*',
+    ],
   });
-

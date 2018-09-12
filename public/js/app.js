@@ -14089,8 +14089,7 @@ module.exports = checkPropTypes;
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(18);
-module.exports = __webpack_require__(58);
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
@@ -36416,7 +36415,7 @@ var Example = function (_Component) {
   _createClass(Example, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'container' }, _react2.default.createElement('div', { className: 'row justify-content-center' }, _react2.default.createElement('div', { className: 'col-md-8' }, _react2.default.createElement('div', { className: 'card' }, _react2.default.createElement('div', { className: 'card-header' }, 'Example Component'), _react2.default.createElement('div', { className: 'card-body' }, "I\u2018m an example component chang!")))));
+      return _react2.default.createElement('div', { className: 'container' }, _react2.default.createElement('div', { className: 'row justify-content-center' }, _react2.default.createElement('div', { className: 'col-md-8' }, _react2.default.createElement('div', { className: 'card' }, _react2.default.createElement('div', { className: 'card-header' }, 'Example Component'), _react2.default.createElement('div', { className: 'card-body' }, "I\u2018m an example component change!")))));
     }
   }]);
 
@@ -55830,12 +55829,6 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-
-/***/ }),
-/* 58 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
