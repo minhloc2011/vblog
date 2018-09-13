@@ -31,11 +31,11 @@ mix
       extensions: ['*', '.js', '.jsx'],
     },
   })
-  .react('resources/assets/js/app.js', 'public/js')
+  .react('resources/assets/app/app.js', 'public/js')
   .styles([
     'public/css/core/bootstrap.min.css',
     'public/css/core/now-ui-kit.css',
-    'resources/assets/css/style.css',
+    'resources/assets/app/styles/style.css',
   ], 'public/css/app.css')
   .scripts([
     'public/js/core/jquery.min.js',
@@ -49,6 +49,6 @@ mix
     port: 80,
     open: false,
     files: [
-      'resources/assets/js/**/*',
+      'resources/assets/app/**/*',
     ],
   });

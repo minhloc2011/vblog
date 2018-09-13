@@ -36356,10 +36356,6 @@ module.exports = function spread(callback) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -36391,42 +36387,35 @@ function _classCallCheck(instance, Constructor) {
 function _possibleConstructorReturn(self, call) {
   if (!self) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+  }return call && ((typeof call === 'undefined' ? 'undefined' : _typeof(call)) === "object" || typeof call === "function") ? call : self;
 }
 
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof(superClass)));
   }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-var Example = function (_Component) {
-  _inherits(Example, _Component);
+var App = function (_Component) {
+  _inherits(App, _Component);
 
-  function Example(props) {
-    _classCallCheck(this, Example);
+  function App() {
+    _classCallCheck(this, App);
 
-    var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this, props));
-
-    _this.props = props;
-    return _this;
+    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
   }
 
-  _createClass(Example, [{
+  _createClass(App, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'container' }, _react2.default.createElement('div', { className: 'row justify-content-center' }, _react2.default.createElement('div', { className: 'col-md-8' }, _react2.default.createElement('div', { className: 'card' }, _react2.default.createElement('div', { className: 'card-header' }, 'Example Component'), _react2.default.createElement('div', { className: 'card-body' }, "I\u2018m an example component change!")))));
+      return _react2.default.createElement('div', null, 'Hello world!');
     }
   }]);
 
-  return Example;
+  return App;
 }(_react.Component);
 
-exports.default = Example;
-
-if (document.getElementById('example')) {
-  _reactDom2.default.render(_react2.default.createElement(Example, null), document.getElementById('example'));
-}
+_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
 
 /***/ }),
 /* 44 */
