@@ -14,3 +14,9 @@
 Auth::routes();
 
 Route::get('/', 'Auth\LoginController@index');
+
+Route::view('/{path?}', 'welcome');
+
+Route::get('/ui', function () {
+    return view('layouts.login');
+});

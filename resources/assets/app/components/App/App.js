@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from '../routes';
 
 class App extends Component {
   render() {
     return (
-      <div>Hello world!</div>
+      <BrowserRouter>
+        <div>
+          <Routes />
+        </div>
+      </BrowserRouter>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;

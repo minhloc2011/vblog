@@ -1,4 +1,5 @@
 let mix = require('laravel-mix');
+const webpackConfig = require('./webpack.config');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,25 +13,7 @@ let mix = require('laravel-mix');
  */
 
 mix
-  .webpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          use: ['babel-loader'],
-        },
-        {
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          use: ['babel-loader', 'eslint-loader'],
-        },
-      ],
-    },
-    resolve: {
-      extensions: ['*', '.js', '.jsx'],
-    },
-  })
+  .webpackConfig(webpackConfig)
   .react('resources/assets/app/app.js', 'public/js')
   .styles([
     'public/css/core/bootstrap.min.css',

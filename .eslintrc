@@ -33,5 +33,12 @@
     "no-multi-assign": "off",
     "no-empty": [1, { "allowEmptyCatch": true }],
     "no-console": [1, { "allow": ["warn", "error"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
   }
 }
