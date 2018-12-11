@@ -17,6 +17,9 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
+    "react/no-unused-prop-types": [1, { "skipShapeProps": true }],
+    "react/prop-types": [2, { "ignore": ["children"]}],
+    "react/destructuring-assignment": [0, "never", {"ignoreClassFields": true}],
     "quotes": [2, "single"],
     "semi": [2, "always"],
     "indent": [2, 2],
@@ -32,7 +35,7 @@
     "no-unused-vars": [1, {"vars": "all", "args": "all"}],
     "no-multi-assign": "off",
     "no-empty": [1, { "allowEmptyCatch": true }],
-    "no-console": [1, { "allow": ["warn", "error"] }],
+    "no-console": [1, { "allow": ["warn", "error", "log"] }],
     "react/self-closing-comp": ["error", {
       "component": true,
       "html": true

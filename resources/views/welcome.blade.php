@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 <div id="app"></div>
 
-<script src="{{asset('js/vendor.js')}}" ></script>
-<script src="{{asset('js/app.js')}}" ></script>
+<script src="{{ secure_asset('js/vendor.js') }}" ></script>
+<script src="{{ secure_asset('js/app.js') }}" ></script>
 </body>
 </html>
