@@ -6,7 +6,7 @@ import login from 'Images/login.jpg';
 class LoginPage extends Component {
   render() {
     return (
-      <div>
+      <div className="login-page sidebar-collapse">
         <NavBar />
         <div className="page-header clear-filter" filter-color="orange">
           <div className="page-header-image" style={{ backgroundImage: `url( ${login} )` }} />

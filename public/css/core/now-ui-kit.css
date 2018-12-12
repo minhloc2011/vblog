@@ -5703,11 +5703,11 @@
     min-width: 180px;
   }
 
-  .login-page .card-login .logo-container {
+  /* .login-page .card-login .logo-container {
     width: 65px;
     margin: 0 auto;
     margin-bottom: 55px;
-  }
+  } */
 
   .login-page .card-login .logo-container img {
     width: 100%;

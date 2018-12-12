@@ -11,11 +11,6 @@ class LoginForm extends Component {
       display: true,
       path: logo,
     };
-    // const socialite = [
-    //   { type: 'twitter', href: '#twitter', isHighlight: false },
-    //   { type: 'facebook', href: '#facebook', isHighlight: true },
-    //   { type: 'google', href: '#google', isHighlight: false },
-    // ];
 
     return (
       <div>
@@ -23,7 +18,19 @@ class LoginForm extends Component {
           <form className="form" method="" action="">
             <CardHeader logo={logoable} />
             <CardBody />
-            <CardFooter />
+            <CardFooter>
+              <a href="#pablo" className="btn btn-primary btn-round btn-lg btn-block">Get Started</a>
+              <div className="pull-left">
+                <h6>
+                  <a href="/registration" className="link">Create Account</a>
+                </h6>
+              </div>
+              <div className="pull-right">
+                <h6>
+                  <a href="#pablo" className="link">Forgot Password?</a>
+                </h6>
+              </div>
+            </CardFooter>
           </form>
         </Card>
       </div>

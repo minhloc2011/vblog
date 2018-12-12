@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Socialite from 'Components/Socialite/Socialite';
+import './CardHeader.scss';
 
 class CardHeader extends Component {
   render() {
