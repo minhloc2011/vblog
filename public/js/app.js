@@ -63113,7 +63113,7 @@ var _LoginPage = __webpack_require__(93);
 
 var _LoginPage2 = _interopRequireDefault(_LoginPage);
 
-var _RegistrationPage = __webpack_require__(110);
+var _RegistrationPage = __webpack_require__(113);
 
 var _RegistrationPage2 = _interopRequireDefault(_RegistrationPage);
 
@@ -63195,7 +63195,7 @@ var _MainLogin = __webpack_require__(95);
 
 var _MainLogin2 = _interopRequireDefault(_MainLogin);
 
-var _login = __webpack_require__(109);
+var _login = __webpack_require__(112);
 
 var _login2 = _interopRequireDefault(_login);
 
@@ -63442,6 +63442,10 @@ var _Card = __webpack_require__(108);
 
 var _Card2 = _interopRequireDefault(_Card);
 
+var _Button = __webpack_require__(109);
+
+var _Button2 = _interopRequireDefault(_Button);
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -63481,7 +63485,7 @@ var LoginForm = function (_Component) {
         path: _logo2.default
       };
 
-      return _react2.default.createElement('div', null, _react2.default.createElement(_Card2.default, { variant: 'card card-login card-plain' }, _react2.default.createElement('form', { className: 'form', method: '', action: '' }, _react2.default.createElement(_CardHeader2.default, { logo: logoable }), _react2.default.createElement(_CardBody2.default, null), _react2.default.createElement(_CardFooter2.default, null, _react2.default.createElement('a', { href: '#pablo', className: 'btn btn-primary btn-round btn-lg btn-block' }, 'Get Started'), _react2.default.createElement('div', { className: 'pull-left' }, _react2.default.createElement('h6', null, _react2.default.createElement('a', { href: '/registration', className: 'link' }, 'Create Account'))), _react2.default.createElement('div', { className: 'pull-right' }, _react2.default.createElement('h6', null, _react2.default.createElement('a', { href: '#pablo', className: 'link' }, 'Forgot Password?')))))));
+      return _react2.default.createElement('div', null, _react2.default.createElement(_Card2.default, { variant: 'card card-login card-plain' }, _react2.default.createElement('form', { className: 'form', method: '', action: '' }, _react2.default.createElement(_CardHeader2.default, { logo: logoable }), _react2.default.createElement(_CardBody2.default, null), _react2.default.createElement(_CardFooter2.default, null, _react2.default.createElement(_Button2.default, { href: '#pablo', size: 'lg', block: true, round: true }, 'Log In'), _react2.default.createElement('div', { className: 'pull-left' }, _react2.default.createElement('h6', null, _react2.default.createElement(_Button2.default, { href: '/registration', link: true }, 'Create Account'))), _react2.default.createElement('div', { className: 'pull-right' }, _react2.default.createElement('h6', null, _react2.default.createElement(_Button2.default, { href: '#pablo', link: true }, 'Forgot Password?')))))));
     }
   }]);
 
@@ -64621,12 +64625,261 @@ exports.default = Card;
 
 /***/ }),
 /* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }return target;
+};
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames = __webpack_require__(110);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _utils = __webpack_require__(111);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _objectWithoutProperties(obj, keys) {
+  var target = {};for (var i in obj) {
+    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
+  }return target;
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var propTypes = {
+  tag: _utils.tagPropType,
+  'aria-label': _propTypes2.default.string,
+  block: _propTypes2.default.bool,
+  round: _propTypes2.default.bool,
+  outLine: _propTypes2.default.bool,
+  iconOnly: _propTypes2.default.bool,
+  size: _propTypes2.default.string,
+  variant: _propTypes2.default.string,
+  className: _propTypes2.default.string,
+  cssModule: _propTypes2.default.shape({}),
+  link: _propTypes2.default.bool
+};
+
+var defaultProps = {
+  tag: 'button',
+  variant: 'primary',
+  block: false,
+  round: false,
+  outLine: false,
+  iconOnly: false,
+  link: false
+};
+
+var Button = function (_React$Component) {
+  _inherits(Button, _React$Component);
+
+  function Button() {
+    _classCallCheck(this, Button);
+
+    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+  }
+
+  _createClass(Button, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          Tag = _props.tag,
+          ariaLabel = _props['aria-label'],
+          block = _props.block,
+          round = _props.round,
+          outLine = _props.outLine,
+          iconOnly = _props.iconOnly,
+          size = _props.size,
+          variant = _props.variant,
+          cssModule = _props.cssModule,
+          className = _props.className,
+          link = _props.link,
+          attributes = _objectWithoutProperties(_props, ['tag', 'aria-label', 'block', 'round', 'outLine', 'iconOnly', 'size', 'variant', 'cssModule', 'className', 'link']);
+
+      var btnBackgroundColor = variant === 'default' ? '' : 'btn-' + variant;
+
+      var classes = (0, _utils.mapToCssModules)((0, _classnames2.default)(className, { link: link }, link || 'btn', link || btnBackgroundColor, size ? 'btn-' + size : false, iconOnly ? 'btn-icon' : false, round ? 'btn-round' : false, outLine ? 'btn-simple' : false, block ? 'btn-block' : false), cssModule);
+
+      if (attributes.href && Tag === 'button' || attributes.href && link) {
+        Tag = 'a';
+      }
+
+      return _react2.default.createElement(Tag, _extends({
+        type: Tag
+      }, attributes, {
+        className: classes,
+        'aria-label': ariaLabel || null
+      }));
+    }
+  }]);
+
+  return Button;
+}(_react2.default.Component);
+
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
+
+exports.default = Button;
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (typeof module !== 'undefined' && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {
+		window.classNames = classNames;
+	}
+}());
+
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.tagPropType = undefined;
+exports.setGlobalCssModule = setGlobalCssModule;
+exports.mapToCssModules = mapToCssModules;
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+var globalCssModule = void 0;
+
+function setGlobalCssModule(cssModule) {
+  globalCssModule = cssModule;
+}
+
+function mapToCssModules() {
+  var className = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  var cssModule = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : globalCssModule;
+
+  if (!cssModule) return className;
+  return className.split(' ').map(function (c) {
+    return cssModule[c] || c;
+  }).join(' ');
+}
+
+var tagPropType = exports.tagPropType = _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string, _propTypes2.default.shape({ $$typeof: _propTypes2.default.symbol, render: _propTypes2.default.func })]);
+
+/***/ }),
+/* 112 */
 /***/ (function(module, exports) {
 
 module.exports = "/images/login.jpg?b21019516fd574253e2354080dc1dd00";
 
 /***/ }),
-/* 110 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

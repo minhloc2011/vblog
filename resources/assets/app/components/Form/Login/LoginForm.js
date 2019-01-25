@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import CardHeader from 'Components/Card/CardHeader/CardHeader';
 import CardBody from 'Components/Card/CardBody/CardBody';
 import CardFooter from 'Components/Card/CardFooter/CardFooter';
-import logo from 'Images/logo.png';
+import logoImg from 'Images/logo.png';
 import Card from 'Components/Card/Card';
+import Button from 'Components/Core/Button/Button';
 
 class LoginForm extends Component {
   render() {
     const logoable = {
       display: true,
-      path: logo,
+      path: logoImg,
     };
 
     return (
@@ -19,15 +20,15 @@ class LoginForm extends Component {
             <CardHeader logo={logoable} />
             <CardBody />
             <CardFooter>
-              <a href="#pablo" className="btn btn-primary btn-round btn-lg btn-block">Get Started</a>
+              <Button href="#pablo" size="lg" block round>Log In</Button>
               <div className="pull-left">
                 <h6>
-                  <a href="/registration" className="link">Create Account</a>
+                  <Button href="/registration" link>Create Account</Button>
                 </h6>
               </div>
               <div className="pull-right">
                 <h6>
-                  <a href="#pablo" className="link">Forgot Password?</a>
+                  <Button href="#pablo" link>Forgot Password?</Button>
                 </h6>
               </div>
             </CardFooter>

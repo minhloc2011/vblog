@@ -19,7 +19,8 @@
     "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
     "react/no-unused-prop-types": [1, { "skipShapeProps": true }],
     "react/prop-types": [2, { "ignore": ["children"]}],
-    "react/destructuring-assignment": [0, "never", {"ignoreClassFields": true}],
+    "react/destructuring-assignment": [0, "never", { "ignoreClassFields": true }],
+    "react/require-default-props": [0, { "forbidDefaultForRequired": false }],
     "quotes": [2, "single"],
     "semi": [2, "always"],
     "indent": [2, 2],
@@ -39,6 +40,10 @@
     "react/self-closing-comp": ["error", {
       "component": true,
       "html": true
+    }],
+    "prefer-const": ["off", {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": true
     }]
   },
   "settings": {

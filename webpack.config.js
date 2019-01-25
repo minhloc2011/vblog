@@ -6,8 +6,8 @@ module.exports = {
     alias: {
       'App': path.join(__dirname, 'resources/assets/app'),
       'Components': path.join(__dirname, 'resources/assets/app/components'),
-      'Images': path.join(__dirname, 'resources/assets/app/images')
-    }
+      'Images': path.join(__dirname, 'resources/assets/app/images'),
+    },
   },
   module: {
     rules: [
@@ -22,5 +22,5 @@ module.exports = {
         use: ['babel-loader', 'eslint-loader'],
       },
     ],
-  }
+  },
 };
