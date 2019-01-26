@@ -8,6 +8,8 @@
     - App
     - Core
       - TextInput
+      - Email
+      - Password
       - TextArea
       - SingleUploadFile
       - MultipleUploadFile
@@ -16,6 +18,8 @@
       - RadioButton
       - Button
       - Link
+    - InputFormGroup
+    - InputFormIcon
     - Card
     - Modal
     - NavBar

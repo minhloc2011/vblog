@@ -1,25 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
+import TextInput from '../../Core/TextInput/TextInput';
+import FormGroup from '../../FormGroup/FormGroup';
+import InputGroup from '../../InputGroup/InputGroup';
 
-class CardBody extends Component {
+class CardBody extends React.Component {
   render() {
     return (
       <div className="card-body">
-        <div className="input-group no-border input-lg">
-          <div className="input-group-prepend">
-            <span className="input-group-text">
+        <InputGroup size="lg" className="no-border">
+          <InputGroup leftIcon>
+            <InputGroup text>
               <i className="now-ui-icons users_circle-08" />
-            </span>
-          </div>
-          <input type="text" className="form-control" placeholder="First Name..." />
-        </div>
-        <div className="input-group no-border input-lg">
-          <div className="input-group-prepend">
-            <span className="input-group-text">
-              <i className="now-ui-icons text_caps-small" />
-            </span>
-          </div>
-          <input type="text" placeholder="Last Name..." className="form-control" />
-        </div>
+            </InputGroup>
+          </InputGroup>
+          <TextInput placeholder="First Name..." />
+        </InputGroup>
+        <InputGroup size="lg" className="no-border">
+          <InputGroup leftIcon>
+            <InputGroup text>
+              <i className="fa fa-user-circle" />
+            </InputGroup>
+          </InputGroup>
+          <TextInput placeholder="Last Name..." />
+        </InputGroup>
+        <FormGroup variant="success">
+          <TextInput variant="success" placeholder="Testing..." />
+        </FormGroup>
       </div>
     );
   }
