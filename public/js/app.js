@@ -64509,17 +64509,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextInput = __webpack_require__(108);
-
-var _TextInput2 = _interopRequireDefault(_TextInput);
-
-var _FormGroup = __webpack_require__(109);
-
-var _FormGroup2 = _interopRequireDefault(_FormGroup);
-
 var _InputGroup = __webpack_require__(116);
 
 var _InputGroup2 = _interopRequireDefault(_InputGroup);
+
+var _Email = __webpack_require__(117);
+
+var _Email2 = _interopRequireDefault(_Email);
+
+var _Password = __webpack_require__(119);
+
+var _Password2 = _interopRequireDefault(_Password);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -64555,7 +64555,7 @@ var CardBody = function (_React$Component) {
   _createClass(CardBody, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'card-body' }, _react2.default.createElement(_InputGroup2.default, { size: 'lg', className: 'no-border' }, _react2.default.createElement(_InputGroup2.default, { leftIcon: true }, _react2.default.createElement(_InputGroup2.default, { text: true }, _react2.default.createElement('i', { className: 'now-ui-icons users_circle-08' }))), _react2.default.createElement(_TextInput2.default, { placeholder: 'First Name...' })), _react2.default.createElement(_InputGroup2.default, { size: 'lg', className: 'no-border' }, _react2.default.createElement(_InputGroup2.default, { leftIcon: true }, _react2.default.createElement(_InputGroup2.default, { text: true }, _react2.default.createElement('i', { className: 'fa fa-user-circle' }))), _react2.default.createElement(_TextInput2.default, { placeholder: 'Last Name...' })), _react2.default.createElement(_FormGroup2.default, { variant: 'success' }, _react2.default.createElement(_TextInput2.default, { variant: 'success', placeholder: 'Testing...' })));
+      return _react2.default.createElement('div', { className: 'card-body' }, _react2.default.createElement(_InputGroup2.default, { size: 'lg', className: 'no-border' }, _react2.default.createElement(_InputGroup2.default, { leftIcon: true }, _react2.default.createElement(_InputGroup2.default, { text: true }, _react2.default.createElement('i', { className: 'now-ui-icons users_circle-08' }))), _react2.default.createElement(_Email2.default, null)), _react2.default.createElement(_InputGroup2.default, { size: 'lg', className: 'no-border' }, _react2.default.createElement(_InputGroup2.default, { leftIcon: true }, _react2.default.createElement(_InputGroup2.default, { text: true }, _react2.default.createElement('i', { className: 'fa fa-user-circle' }))), _react2.default.createElement(_Password2.default, { placeholder: 'Password' })));
     }
   }]);
 
@@ -64565,202 +64565,8 @@ var CardBody = function (_React$Component) {
 exports.default = CardBody;
 
 /***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }return target;
-};
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _classnames = __webpack_require__(18);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _utils = __webpack_require__(19);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _objectWithoutProperties(obj, keys) {
-  var target = {};for (var i in obj) {
-    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
-  }return target;
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var propTypes = {
-  tag: _utils.tagPropType,
-  variant: _propTypes2.default.oneOf(['success', 'danger']),
-  className: _propTypes2.default.string,
-  cssModule: _propTypes2.default.shape({})
-};
-
-var defaultProps = {
-  tag: 'input'
-};
-
-var TextInput = function (_React$Component) {
-  _inherits(TextInput, _React$Component);
-
-  function TextInput() {
-    _classCallCheck(this, TextInput);
-
-    return _possibleConstructorReturn(this, (TextInput.__proto__ || Object.getPrototypeOf(TextInput)).apply(this, arguments));
-  }
-
-  _createClass(TextInput, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          Tag = _props.tag,
-          variant = _props.variant,
-          className = _props.className,
-          cssModule = _props.cssModule,
-          attributes = _objectWithoutProperties(_props, ['tag', 'variant', 'className', 'cssModule']);
-
-      var type = 'text';
-
-      var outLineColor = variant ? 'form-control-' + variant : '';
-
-      var classes = (0, _utils.mapToCssModules)((0, _classnames2.default)(className, 'form-control', outLineColor), cssModule);
-
-      return _react2.default.createElement(Tag, _extends({ type: type }, attributes, { className: classes }));
-    }
-  }]);
-
-  return TextInput;
-}(_react2.default.Component);
-
-TextInput.propTypes = propTypes;
-TextInput.defaultProps = defaultProps;
-
-exports.default = TextInput;
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }return target;
-};
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _classnames = __webpack_require__(18);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _utils = __webpack_require__(19);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-function _objectWithoutProperties(obj, keys) {
-  var target = {};for (var i in obj) {
-    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
-  }return target;
-}
-
-var propTypes = {
-  tag: _utils.tagPropType,
-  variant: _propTypes2.default.oneOf(['success', 'danger']),
-  className: _propTypes2.default.string,
-  cssModule: _propTypes2.default.shape({})
-};
-
-var defaultProps = {
-  tag: 'div'
-};
-
-var FormGroup = function FormGroup(props) {
-  var Tag = props.tag,
-      variant = props.variant,
-      className = props.className,
-      cssModule = props.cssModule,
-      attributes = _objectWithoutProperties(props, ['tag', 'variant', 'className', 'cssModule']);
-
-  var classes = (0, _utils.mapToCssModules)((0, _classnames2.default)(className, 'form-group', variant ? 'has-' + variant : false), cssModule);
-
-  return _react2.default.createElement(Tag, _extends({ className: classes }, attributes));
-};
-
-FormGroup.propTypes = propTypes;
-FormGroup.defaultProps = defaultProps;
-
-exports.default = FormGroup;
-
-/***/ }),
+/* 108 */,
+/* 109 */,
 /* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65245,6 +65051,262 @@ InputGroup.propTypes = propTypes;
 InputGroup.defaultProps = defaultProps;
 
 exports.default = InputGroup;
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }return target;
+};
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames = __webpack_require__(18);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _utils = __webpack_require__(19);
+
+var _Input = __webpack_require__(118);
+
+var _Input2 = _interopRequireDefault(_Input);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _objectWithoutProperties(obj, keys) {
+  var target = {};for (var i in obj) {
+    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
+  }return target;
+}
+
+var Email = function Email(props) {
+  var className = props.className,
+      cssModule = props.cssModule,
+      attributes = _objectWithoutProperties(props, ['className', 'cssModule']);
+
+  var classes = (0, _utils.mapToCssModules)((0, _classnames2.default)(className), cssModule);
+
+  return _react2.default.createElement(_Input2.default, _extends({ type: 'email' }, attributes, { className: classes, placeholder: 'Email Address' }));
+};
+
+Email.propTypes = {
+  className: _propTypes2.default.string,
+  cssModule: _propTypes2.default.shape({})
+};
+
+exports.default = Email;
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }return target;
+};
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames = __webpack_require__(18);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _utils = __webpack_require__(19);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _objectWithoutProperties(obj, keys) {
+  var target = {};for (var i in obj) {
+    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
+  }return target;
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var propTypes = {
+  tag: _utils.tagPropType,
+  type: _propTypes2.default.string,
+  variant: _propTypes2.default.oneOf(['success', 'danger']),
+  className: _propTypes2.default.string,
+  cssModule: _propTypes2.default.shape({})
+};
+
+var defaultProps = {
+  tag: 'input',
+  type: 'text'
+};
+
+var Input = function (_React$Component) {
+  _inherits(Input, _React$Component);
+
+  function Input() {
+    _classCallCheck(this, Input);
+
+    return _possibleConstructorReturn(this, (Input.__proto__ || Object.getPrototypeOf(Input)).apply(this, arguments));
+  }
+
+  _createClass(Input, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          Tag = _props.tag,
+          type = _props.type,
+          variant = _props.variant,
+          className = _props.className,
+          cssModule = _props.cssModule,
+          attributes = _objectWithoutProperties(_props, ['tag', 'type', 'variant', 'className', 'cssModule']);
+
+      var outLineColor = variant ? 'form-control-' + variant : '';
+
+      var classes = (0, _utils.mapToCssModules)((0, _classnames2.default)(className, 'form-control', outLineColor), cssModule);
+
+      return _react2.default.createElement(Tag, _extends({ type: type }, attributes, { className: classes }));
+    }
+  }]);
+
+  return Input;
+}(_react2.default.Component);
+
+Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
+
+exports.default = Input;
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }return target;
+};
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames = __webpack_require__(18);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _utils = __webpack_require__(19);
+
+var _Input = __webpack_require__(118);
+
+var _Input2 = _interopRequireDefault(_Input);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _objectWithoutProperties(obj, keys) {
+  var target = {};for (var i in obj) {
+    if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
+  }return target;
+}
+
+var Password = function Password(props) {
+  var className = props.className,
+      cssModule = props.cssModule,
+      attributes = _objectWithoutProperties(props, ['className', 'cssModule']);
+
+  var classes = (0, _utils.mapToCssModules)((0, _classnames2.default)(className), cssModule);
+
+  return _react2.default.createElement(_Input2.default, _extends({ type: 'password' }, attributes, { className: classes }));
+};
+
+Password.propTypes = {
+  className: _propTypes2.default.string,
+  cssModule: _propTypes2.default.shape({})
+};
+
+exports.default = Password;
 
 /***/ })
 /******/ ]);

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from 'App/utils/utils';
-import Input from '../Input/Input';
+import Input from 'Components/Core/Input/Input';
 
-const TextInput = (props) => {
+const Password = (props) => {
   const {
     className,
     cssModule,
@@ -16,13 +16,13 @@ const TextInput = (props) => {
   ), cssModule);
 
   return (
-    <Input type="text" {...attributes} className={classes} />
+    <Input type="password" {...attributes} className={classes} />
   );
 };
 
-TextInput.propTypes = {
+Password.propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.shape({}),
 };
 
-export default TextInput;
+export default Password;

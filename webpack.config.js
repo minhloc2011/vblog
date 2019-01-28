@@ -6,6 +6,7 @@ module.exports = {
     alias: {
       'App': path.join(__dirname, 'resources/assets/app'),
       'Components': path.join(__dirname, 'resources/assets/app/components'),
+      'Core': path.join(__dirname, 'resources/assets/app/components/Core'),
       'Images': path.join(__dirname, 'resources/assets/app/images'),
     },
   },
