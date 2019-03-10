@@ -1,9 +1,10 @@
-#vblog
+# vblog
 
 ### Backend
 - PHP >= 7.2
 - MySQL 5.7
-- ...
+- Nginx
+- Redis
 
 ### Frontend
 - ReactJS
