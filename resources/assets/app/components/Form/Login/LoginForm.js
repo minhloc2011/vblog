@@ -20,7 +20,7 @@ class LoginForm extends Component {
             <CardHeader logo={logoable} />
             <CardBody />
             <CardFooter>
-              <Button href="#pablo" size="lg" block round>Log In</Button>
+              <Button href="#" size="lg" block round>Log In</Button>
               <div className="pull-left">
                 <h6>
                   <Button href="/registration" link>Create Account</Button>
@@ -28,7 +28,7 @@ class LoginForm extends Component {
               </div>
               <div className="pull-right">
                 <h6>
-                  <Button href="#pablo" link>Forgot Password?</Button>
+                  <Button href="#" link>Forgot Password?</Button>
                 </h6>
               </div>
             </CardFooter>

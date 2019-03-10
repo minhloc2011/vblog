@@ -1,7 +1,7 @@
 import React from 'react';
-import InputGroup from '../../InputGroup/InputGroup';
-import Email from '../../Core/Email/Email';
-import Password from '../../Core/Password/Password';
+import InputGroup from 'Components/InputGroup/InputGroup';
+import Email from 'Components/Core/Email/Email';
+import Password from 'Components/Core/Password/Password';
 
 class CardBody extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class CardBody extends React.Component {
         <InputGroup size="lg" className="no-border">
           <InputGroup leftIcon>
             <InputGroup text>
-              <i className="now-ui-icons users_circle-08" />
+              <i className="fas fa-at" />
             </InputGroup>
           </InputGroup>
           <Email />
@@ -18,7 +18,7 @@ class CardBody extends React.Component {
         <InputGroup size="lg" className="no-border">
           <InputGroup leftIcon>
             <InputGroup text>
-              <i className="fa fa-user-circle" />
+              <i className="fas fa-key" />
             </InputGroup>
           </InputGroup>
           <Password placeholder="Password" />

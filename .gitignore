@@ -15,3 +15,5 @@ yarn-error.log
 .editorconfig
 composer.lock
 package-lock.json
+phpunit.local.xml
+.DS_Store
