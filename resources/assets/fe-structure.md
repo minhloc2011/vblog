@@ -1,0 +1,27 @@
+## Structures
+
+- app
+  - images
+  - styles
+  - utils
+  - components
+    - App
+    - Core
+      - TextInput
+      - Email
+      - Password
+      - TextArea
+      - SingleUploadFile
+      - MultipleUploadFile
+      - Dropdown
+      - Checkbox
+      - RadioButton
+      - Button
+      - Link
+    - InputFormGroup
+    - InputFormIcon
+    - Card
+    - Modal
+    - NavBar
+    - SideBar
+    - Search

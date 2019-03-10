@@ -12,3 +12,8 @@ npm-debug.log
 yarn-error.log
 .env
 .phpunit.result.cache
+.editorconfig
+composer.lock
+package-lock.json
+phpunit.local.xml
+.DS_Store
